@@ -1,0 +1,45 @@
+class A
+{
+	void show1()
+	{	
+		System.out.println("Class A");
+	}
+}
+interface B 
+{
+	void show2();
+}
+interface C 
+{
+	void show3();
+}
+class D extends A implements B,C
+{
+	public void show2()
+	{	
+		System.out.println("Class B");
+	}
+	
+	public void show3()
+	{	
+		System.out.println("Class C");
+	}
+	
+	void show4()
+	{	
+		System.out.println("Class D");
+	}
+}
+class A
+{
+	public static void main(String [] args)
+	{	
+		D x=new D();
+		x.show1();
+		x.show2();
+		x.show3();
+		x.show4();
+	}
+}
+
+
